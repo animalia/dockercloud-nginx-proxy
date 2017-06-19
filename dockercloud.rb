@@ -84,7 +84,7 @@ class Container
   end
 
   def ssl?
-    !!attributes['container_envvars'].find {|e| e['key'] == 'FORCE_SSL' }['value']
+    !attributes['container_envvars'].find {|e| e['key'] == 'DISABLE_SSL_REQUIREMENT' }['value']
   end
 
   def ssl_cert
