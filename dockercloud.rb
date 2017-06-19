@@ -160,7 +160,7 @@ class Service
   end
 
   def ssl?
-    @ssl ||= containers.first.ssl? rescue nil
+    @ssl ||= containers.first.ssl? rescue true
   end
 
   def ssl_cert_path
